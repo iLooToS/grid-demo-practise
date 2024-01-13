@@ -1,0 +1,19 @@
+body {
+	background: linear-gradient(107.32deg, #804BD8 5.53%, #544AD8 97.3%);
+}
+
+.container {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: [sidebar] 1fr [body] 1fr [endline];
+}
+
+.container > div {
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	border: 2px solid #FE7A71;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
