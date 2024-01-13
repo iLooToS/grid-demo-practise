@@ -5,7 +5,43 @@ body {
 .container {
 	display: grid;
 	gap: 10px;
-	grid-template-columns: [sidebar] 1fr [body] 1fr [endline];
+	grid-template-columns: [sidebar] 1fr [body] 1fr 1 fr[endline];
+	grid-template-areas: 
+		"header header header" 
+		"sidebar body body"  
+		". footer footer" 
+	/* grid-template-areas:
+			"header header header"
+			"sidebar body body"
+			". footer footer" 
+			/ 1fr 1fr 1fr*/
+}
+
+.header {
+	grid-area: header;
+}
+
+.body {
+	grid-area: body;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+@media (max-width: 600px) {
+	.container {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"header"
+			"body"
+			"sidebar"
+			"footer"
+		}
 }
 
 .container > div {
